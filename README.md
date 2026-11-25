@@ -1,3 +1,26 @@
+# Earth Engine map application
+
+[![CI](https://github.com/henokwon/reboot_earth/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/henokwon/reboot_earth/actions/workflows/ci.yml)
+
+## Continuous integration
+
+CI uses Node.js 22 and the npm lockfile to run credential-isolation tests, lint,
+TypeScript checks and a Next.js production build on pull requests and pushes to
+`master`. It requires no Earth Engine credentials.
+
+Run the same checks locally:
+
+```bash
+npm ci --ignore-scripts --no-audit --no-fund
+npm run test:security
+npm run lint
+npx --no-install tsc --noEmit
+npm run build
+```
+
+Tests mock Earth Engine; a passing build does not verify live provider access.
+For runtime credentials and exposed-key revocation, see [SECURITY.md](SECURITY.md).
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
