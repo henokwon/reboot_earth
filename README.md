@@ -6,8 +6,7 @@
 
 CI uses Node.js 22 and the npm lockfile to run credential-isolation tests, lint,
 TypeScript checks and a Next.js production build on pull requests and pushes to
-`master`. It requires no Earth Engine credentials. The badge reports the default
-branch workflow status and becomes available after the workflow runs there.
+`master`. It requires no Earth Engine credentials.
 
 Run the same checks locally:
 
