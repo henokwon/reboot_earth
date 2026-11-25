@@ -26,7 +26,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
+.env*
+!.env.example
+key.json
+**/key.json
+*.key
+.node-xmlhttprequest-*
 
 # vercel
 .vercel
